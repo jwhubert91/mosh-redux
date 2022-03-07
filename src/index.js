@@ -1,17 +1,17 @@
-function greet(fn) {
-  console.log(fn());
-}
+let input = "   Javascript   ";
 
-// A higher order function is a function which takes another function as an argument, as above.
+let output = "<div>" + input.trim() + "</div>"
 
-function sayHello() {
-  return function() {
-    return "Hello World";
-  }
-}
+console.log(output);
 
-// Some examples:
+// Let's take the above and rewrite it with func programming principles
 
-// The .map() method which takes a function
+const trim = str => str.trim();
+const wrapInDiv = str => `<div>${str}</div> `;
+const toLowerCase = str = str.toLowerCase();
 
-// setTimeout() is also an HOC because it takes a function as an argument
+const result = wrapInDiv(toLowerCase(trim(input)));
+
+// The above returns the output your want, and the return value is computed by multiple functions at once (or, a function accepting another function, one or more times). This is called function composition.
+
+// As problems get more complex the number of parentheses will get overwhelming...

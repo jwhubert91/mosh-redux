@@ -1,17 +1,23 @@
-let input = "   Javascript   ";
+/*
 
-let output = "<div>" + input.trim() + "</div>"
+IMMUTABILITY
 
-console.log(output);
+  - In pure functional programming languages data is immutable
+  - JS is not a pure func prog lang because you can mutate objects in JS... but you can't mutate strings
 
-// Let's take the above and rewrite it with func programming principles
+  const prevents mutability :)
+  let does not
 
-const trim = str => str.trim();
-const wrapInDiv = str => `<div>${str}</div> `;
-const toLowerCase = str = str.toLowerCase();
 
-const result = wrapInDiv(toLowerCase(trim(input)));
+  Benefits of immutability:
+  - Predictable - You won't change global state
+  - Faster change detection - If object properties cannot be changed, to detect a diff you can simply compare two object properties
+  - Concurrency - will not mess up state of system if run in parallel
 
-// The above returns the output your want, and the return value is computed by multiple functions at once (or, a function accepting another function, one or more times). This is called function composition.
+  Cons of immutability:
+  - Performance (with thousands or millions of objects, when copying)
+  - Memory overhead (when copying objects)
 
-// As problems get more complex the number of parentheses will get overwhelming...
+  Bottom line: If you're using Redux, you should not mutate data.
+
+*/

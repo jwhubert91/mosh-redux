@@ -4,9 +4,10 @@ function sayHello() {
   }
 }
 
-// The purpose of the below assignment and calls is to demonstrate that functions can be treated like any other object in JS
+// The purpose of the below assignment and calls is to demonstrate that functions can be treated like any other object in JS. And above, we see that functions can also be returned from other functions.
 let fn = sayHello();
 let message = fn();
+console.log(fn());
 
 
 /*
